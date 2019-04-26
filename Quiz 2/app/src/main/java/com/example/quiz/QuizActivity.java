@@ -112,7 +112,7 @@ public class QuizActivity extends AppCompatActivity {
                     if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()|| rb4.isChecked()) {
                         checkAnswer();
                     } else {
-                        Toast.makeText(QuizActivity.this, "Please select an answer", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(QuizActivity.this, "Please select an option above", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     showNextQuestion();
@@ -174,11 +174,6 @@ public class QuizActivity extends AppCompatActivity {
 
         textViewCountDown.setText(timeFormatted);
 
-        if (timeLeftInMillis < 10000) {
-            textViewCountDown.setTextColor(Color.RED);
-        } else {
-            textViewCountDown.setTextColor(textColorDefaultCd);
-        }
     }
 
     private void checkAnswer() {
@@ -206,19 +201,19 @@ public class QuizActivity extends AppCompatActivity {
         switch (currentQuestion.getAnswerNr()) {
             case 1:
                 rb1.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer 1 is correct");
+                textViewQuestion.setText("Option 1 is the correct answer");
                 break;
             case 2:
                 rb2.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer 2 is correct");
+                textViewQuestion.setText("Option 2 is the correct answer");
                 break;
             case 3:
                 rb3.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer 3 is correct");
+                textViewQuestion.setText("Option 3 is the correct answer");
                 break;
             case 4:
                 rb4.setTextColor(Color.GREEN);
-                textViewQuestion.setText("Answer 4 is correct");
+                textViewQuestion.setText("Option 4 is the correct answer");
                 break;
         }
 
