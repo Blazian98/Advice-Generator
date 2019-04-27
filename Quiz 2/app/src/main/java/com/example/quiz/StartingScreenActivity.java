@@ -43,6 +43,16 @@ public class StartingScreenActivity extends AppCompatActivity {
                 startQuiz();
             }
         });
+
+        Button instructions = findViewById(R.id.instructions);
+
+        instructions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), PopActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void startQuiz() {
